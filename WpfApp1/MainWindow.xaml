@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="470.902" Width="800">
+    <Grid Margin="0,0,0,-3" Height="443" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid HorizontalAlignment="Left" Height="204" VerticalAlignment="Center" Width="332" Margin="0,0,0,239"/>
+        <Button x:Name="insertButton" Content="Добавить пользователя" HorizontalAlignment="Left" Margin="363,10,0,0" VerticalAlignment="Top" Width="169" Height="39" RenderTransformOrigin="0.45,0.902" Click="insertButton_Click"/>
+        <TextBox x:Name="NameBox" HorizontalAlignment="Left" Height="23" Margin="171,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.499,2.304" IsReadOnlyCaretVisible="True" IsEnabled="False"/>
+        <TextBox x:Name="SNameBox" HorizontalAlignment="Left" Height="23" Margin="171,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.283,1.251" IsReadOnlyCaretVisible="True" IsEnabled="False"/>
+        <TextBox x:Name="AgeBox" HorizontalAlignment="Left" Height="26" Margin="171,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.54,1.37" IsReadOnlyCaretVisible="True" IsEnabled="False"/>
+        <Label Content="Имя" HorizontalAlignment="Left" Margin="97,70,0,0" VerticalAlignment="Top" Height="23" Width="74"/>
+        <Label Content="Фамилия" HorizontalAlignment="Left" Margin="97,98,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.11,-0.464" Height="23" Width="74"/>
+        <Label Content="Возраст" HorizontalAlignment="Left" Margin="97,126,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.11,-0.464" Height="26" Width="74"/>
+        <Button x:Name="deletButton" Content="Удалить пользователя" HorizontalAlignment="Left" Margin="363,54,0,0" VerticalAlignment="Top" Width="169" Height="38" Click="deletButton_Click"/>
+        <Button x:Name="updateButton" Content="Обновить информацию о &#xD;&#xA;            пользователе" HorizontalAlignment="Left" Margin="363,97,0,0" VerticalAlignment="Top" Width="169" Height="38" Click="updateButton_Click"/>
+        <DataGrid x:Name="dgvData" Height="229" Margin="0,204,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="606" ColumnWidth="*" CanUserAddRows="False" CanUserResizeRows="False" BeginningEdit="Cell_Click"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="-67,-49,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="SaveButton" Content="Сохранить&#xD;&#xA;&#xD;&#xA;" HorizontalAlignment="Left" Margin="363,140,0,0" VerticalAlignment="Top" Width="169" Height="37" Click="SaveButton_Click"/>
+        <TextBox x:Name="SearchBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="16,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="SearchBox_TextChanged"/>
+        <Label Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="Поиск" Grid.Column="1" HorizontalAlignment="Left" Margin="16,8,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.526,-4.615" Width="120" Height="27"/>
+
+    </Grid>
+</Window>
